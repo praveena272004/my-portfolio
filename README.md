@@ -33,8 +33,8 @@ This website showcases my **skills, projects, and contact details**, with smooth
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/ToDoApp.git
-cd ToDoApp
+git clone https://github.com/yourusername/myportfolio.git
+cd myportfolio
 ```
 
 ### 2️⃣ Install dependencies
