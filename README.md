@@ -33,7 +33,7 @@ This website showcases my **skills, projects, and contact details**, with smooth
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/myportfolio.git
+git clone https://github.com/praveena272004/myportfolio.git
 cd myportfolio
 ```
 
