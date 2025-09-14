@@ -8,7 +8,7 @@ import {
   Mail,
   Linkedin,
   Github,
-} from "lucide-react"; 
+} from "lucide-react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -146,6 +146,7 @@ function NavBar() {
 
 // ====== HERO ======
 function Hero() {
+  const [toastVisible, setToastVisible] = useState(false);
   return (
     <section
       id="hero"
@@ -164,16 +165,22 @@ function Hero() {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Praveena_Resume.pdf"; 
+              link.href = "/Praveena_Resume.pdf";
               link.download = "Praveena_Resume.pdf";
-              document.body.appendChild(link);
               link.click();
-              document.body.removeChild(link);
+              setToastVisible(true);
+              setTimeout(() => setToastVisible(false), 3000);
             }}
             className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700"
           >
             Download Resume
           </button>
+          {toastVisible && (
+            <div className="fixed bottom-30 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2 text-sm sm:text-base z-50 max-w-xs sm:max-w-sm w-full sm:w-auto">
+              <span className="text-lg">✅</span>
+              <span>Resume downloaded successfully!</span>
+            </div>
+          )}
         </div>
       </div>
     </section>
@@ -252,46 +259,45 @@ function Skills() {
   };
 
   return (
-  <section
-    id="skills"
-    className="relative pt-16 pb-30 bg-white text-gray-900 scroll-mt-20 border-b border-white"
-  >
-    <motion.div
-      className="absolute inset-0 bg-gradient-radial from-gray-50 via-transparent to-transparent pointer-events-none"
-      animate={{ scale: [1, 1.03, 1], opacity: [0.3, 0.5, 0.3] }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    />
+    <section
+      id="skills"
+      className="relative pt-16 pb-30 bg-white text-gray-900 scroll-mt-20 border-b border-white"
+    >
+      <motion.div
+        className="absolute inset-0 bg-gradient-radial from-gray-50 via-transparent to-transparent pointer-events-none"
+        animate={{ scale: [1, 1.03, 1], opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
 
-    {/* Skills content */}
-    <div className="relative max-w-6xl mx-auto px-4 text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 logo-font">
-        Skills
-      </h2>
-      <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
-        {skills.map((s, i) => (
-          <motion.span
-            key={s.name}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full shadow-md ${
-              colorMap[s.type]
-            }`}
-            whileHover={{ scale: 1.08 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: i * 0.1,
-              ease: "easeOut",
-            }}
-          >
-            <span className="text-lg">{s.icon}</span>
-            {s.name}
-          </motion.span>
-        ))}
+      {/* Skills content */}
+      <div className="relative max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 logo-font">
+          Skills
+        </h2>
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
+          {skills.map((s, i) => (
+            <motion.span
+              key={s.name}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full shadow-md ${
+                colorMap[s.type]
+              }`}
+              whileHover={{ scale: 1.08 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: "easeOut",
+              }}
+            >
+              <span className="text-lg">{s.icon}</span>
+              {s.name}
+            </motion.span>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
-
+    </section>
+  );
 }
 
 // ====== PROJECTS ======
