@@ -1,4 +1,4 @@
-# 🌐 Praveena M – Portfolio Website
+#  Praveena M – Portfolio Website
 
 A modern, responsive, and interactive **portfolio website** built with **React, Tailwind CSS, Vite, and Framer Motion**.  
 This website showcases my **skills, projects, and contact details**, with smooth animations and a clean UI.
