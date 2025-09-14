@@ -28,34 +28,6 @@ This website showcases my **skills, projects, and contact details**, with smooth
 
 ---
 
-public/
-│-- screenshots/
-│   ├─ dark-mode.png
-│   ├─ filtering.png
-│   ├─ light-mode.png
-│-- favicon.png
-
-src/
-│-- components/
-│   ├─ TaskInput.jsx
-│   ├─ TaskFilter.jsx
-│   ├─ TaskList.jsx
-│-- Theme.js
-│-- App.jsx
-│-- index.css
-│-- main.jsx
-
-.gitignore
-.eslintrc.js
-index.html
-package-lock.json
-package.json
-vite.config.js
-LICENSE
-README.md
-
----
-
 ## ⚡ Getting Started
 
 ### 1️⃣ Clone the repo
