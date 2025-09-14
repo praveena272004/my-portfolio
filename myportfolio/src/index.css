@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;      /* enables smooth scroll */
+  scroll-behavior: smooth;      
   scroll-padding-top: 10px; 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;    /* adjust to your navbar height */
 }
@@ -14,12 +14,11 @@ html {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: none; /* no cursor since you want smooth */
-  animation: typing 3s linear forwards; /* smooth typing */
+  border-right: none; 
+  animation: typing 3s linear forwards; 
   position: relative;
 }
 
-/* Smooth typing (reveal effect) */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -32,7 +31,6 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #374151 inset; /* bg-gray-700 */
-  -webkit-text-fill-color: #f9fafb; /* text-gray-100 */
+  -webkit-box-shadow: 0 0 0px 1000px #374151 inset; 
   transition: background-color 5000s ease-in-out 0s;
 }

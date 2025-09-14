@@ -8,7 +8,7 @@ import {
   Mail,
   Linkedin,
   Github,
-} from "lucide-react"; // npm install lucide-react
+} from "lucide-react"; 
 import {
   FaHtml5,
   FaCss3Alt,
@@ -164,7 +164,7 @@ function Hero() {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Praveena_Resume.pdf"; // file in public folder
+              link.href = "/Praveena_Resume.pdf"; 
               link.download = "Praveena_Resume.pdf";
               document.body.appendChild(link);
               link.click();
@@ -256,7 +256,6 @@ function Skills() {
     id="skills"
     className="relative pt-16 pb-30 bg-white text-gray-900 scroll-mt-20 border-b border-white"
   >
-    {/* Subtle pulsing radial gradient behind badges */}
     <motion.div
       className="absolute inset-0 bg-gradient-radial from-gray-50 via-transparent to-transparent pointer-events-none"
       animate={{ scale: [1, 1.03, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -299,15 +298,12 @@ function Skills() {
 function ProjectCard({ p }) {
   return (
     <div className="bg-gray-900 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition flex flex-col w-full h-full">
-      {/* Top part grows to fill available space */}
       <div className="p-4 flex-grow">
         <h3 className="text-lg logo-font font-semibold text-white">
           {p.title}
         </h3>
         <p className="text-white text-sm mt-2">{p.desc}</p>
       </div>
-
-      {/* Bottom buttons always stick at same place */}
       <div className="p-4 flex gap-2 mt-auto">
         <a
           href={p.live}
@@ -340,8 +336,6 @@ function Projects() {
         <h2 className="text-2xl sm:text-3xl text-center font-bold mb-6 text-gray-900 logo-font">
           Projects
         </h2>
-
-        {/* Flex container to center cards */}
         <div className="flex flex-wrap justify-center gap-6">
           {PROJECTS.map((p) => (
             <div
@@ -467,8 +461,6 @@ function Contact() {
             </div>
           )}
         </form>
-
-        {/* Contact links */}
         {/* Contact links */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
