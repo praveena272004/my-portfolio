@@ -31,7 +31,7 @@ const PERSON = {
   tagline: "Frontend Developer • React | Redux | Tailwind",
   location: "Tamil Nadu, India",
   email: "praveenamanivannan2004@gmail.com",
-  linkedin: "https://www.linkedin.com/in/praveena-manivannan-3766b0336",
+  linkedin: "https://www.linkedin.com/in/praveena274",
   github: "https://github.com/praveena272004",
   resume: "/Praveena_Resume.pdf",
   about: `I’m a B.E. ECE (Hons.) student passionate about web development, creating responsive and interactive applications with React, Tailwind CSS, Redux Toolkit, Python and modern tools like Vite & Netlify.`,
