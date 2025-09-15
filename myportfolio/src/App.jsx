@@ -154,8 +154,10 @@ function Hero() {
     >
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-3xl sm:text-5xl font-bold mb-4 text-gray-900 typewriter logo-font">
-          Hi, I’m {PERSON.name}
-        </h1>
+  <span className="text-2xl sm:text-4xl font-normal">Hi, I’m</span>{" "}
+  <span className="text-3xl sm:text-5xl font-bold text-gray-900">{PERSON.name}</span>
+</h1>
+
 
         <p className="text-md sm:text-lg text-gray-800 font-semibold mb-6 logo-font">
           {PERSON.tagline}
@@ -474,7 +476,7 @@ function Contact() {
             className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-gray-800 shadow-sm border border-gray-900 hover:shadow-md hover:bg-gray-700 transition mx-auto"
           >
             <Mail className="w-5 h-5 text-white" />
-            <span className="font-medium text-white">{PERSON.email}</span>
+            <span className="font-medium text-white">Gmail</span>
           </a>
 
           <a
